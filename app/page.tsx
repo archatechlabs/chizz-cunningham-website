@@ -4,10 +4,21 @@ import PhilosophySection from '@/components/PhilosophySection'
 import VenturesSection from '@/components/VenturesSection'
 import PressSection from '@/components/PressSection'
 import ContactSection from '@/components/ContactSection'
+import ScrollProgress from '@/components/ScrollProgress'
+import BackToTop from '@/components/BackToTop'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-off-white relative overflow-hidden">
+      {/* Scroll Progress Indicator */}
+      <ScrollProgress />
+      
+      {/* Back to Top Button */}
+      <BackToTop />
+      
+      {/* Subtle grain overlay - A24 aesthetic */}
+      <div className="grain-overlay" aria-hidden="true" />
+
       {/* Subtle background decorations */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Top right gradient blob */}
@@ -29,9 +40,7 @@ export default function Home() {
       {/* Main container */}
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
         {/* Navigation */}
-        <div className="py-6 md:py-8">
-          <Nav />
-        </div>
+        <Nav />
         
         {/* Hero Section */}
         <div className="mt-4 md:mt-8">
