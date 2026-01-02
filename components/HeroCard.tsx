@@ -30,7 +30,7 @@ export default function HeroCard() {
               className="text-[#6B6B6B] text-xs sm:text-sm font-medium tracking-[0.2em] uppercase mb-6 opacity-0 hero-animate"
               style={{ animationDelay: '0.15s' }}
             >
-              Tech Entrepreneur & Investor
+              Tech Entrepreneur & Investor • CTO, Baron Davis Enterprises
             </p>
 
             {/* Headline */}
@@ -62,11 +62,11 @@ export default function HeroCard() {
             >
               <span>Founder</span>
               <span className="text-[#3A3A3A]">•</span>
+              <span>CTO</span>
+              <span className="text-[#3A3A3A]">•</span>
               <span>Product Builder</span>
               <span className="text-[#3A3A3A]">•</span>
               <span>Systems Thinker</span>
-              <span className="text-[#3A3A3A]">•</span>
-              <span>Culture + Tech</span>
             </div>
 
             {/* CTA Buttons */}

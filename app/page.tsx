@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import HeroCard from '@/components/HeroCard'
 import PhilosophySection from '@/components/PhilosophySection'
 import VenturesSection from '@/components/VenturesSection'
+import PressSection from '@/components/PressSection'
 import ContactSection from '@/components/ContactSection'
 
 export default function Home() {
@@ -42,6 +43,9 @@ export default function Home() {
 
         {/* Ventures Section */}
         <VenturesSection />
+
+        {/* Press Section */}
+        <PressSection />
 
         {/* Contact Section */}
         <ContactSection />
