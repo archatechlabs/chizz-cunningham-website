@@ -19,6 +19,16 @@ interface Venture {
 
 const ventures: Venture[] = [
   {
+    name: 'Archatech Labs',
+    mission: 'Product studio and engineering for ambitious startups and enterprise.',
+    differentiator: 'Not just code—strategic product development from zero-to-one, with a focus on consumer tech and Web3.',
+    credibility: 'Full-stack product studio',
+    link: 'https://archatechlabs.com',
+    external: true,
+    categories: ['AI', 'Web3', 'Consumer'],
+    fullDescription: 'Archatech Labs is a product studio that partners with visionary founders and enterprises to build transformative technology products. From concept to scale, we provide strategic product development, engineering excellence, and deep expertise in AI, Web3, and consumer technology.',
+  },
+  {
     name: 'MyPal4Life + SkyLi',
     mission: 'Smart pet health ecosystem powered by proprietary hardware, AI, and blockchain incentives.',
     differentiator: 'End-to-end platform: SkyLi smart collar with medical-grade sensors tracks vitals 24/7, while MyPal4Life rewards pet owners for proactive wellness.',
@@ -54,16 +64,6 @@ const ventures: Venture[] = [
     link: '#contact',
     categories: ['Gaming', 'Consumer'],
     fullDescription: 'Neighborhood Tales creates gaming and virtual world experiences that authentically represent diverse communities and their stories. We\'re building digital spaces where real neighborhoods, real histories, and real cultural expressions come to life—giving underrepresented communities ownership of their narratives in the digital age.',
-  },
-  {
-    name: 'Archatech Labs',
-    mission: 'Product studio and engineering for ambitious startups and enterprise.',
-    differentiator: 'Not just code—strategic product development from zero-to-one, with a focus on consumer tech and Web3.',
-    credibility: 'Full-stack product studio',
-    link: 'https://archatechlabs.com',
-    external: true,
-    categories: ['AI', 'Web3', 'Consumer'],
-    fullDescription: 'Archatech Labs is a product studio that partners with visionary founders and enterprises to build transformative technology products. From concept to scale, we provide strategic product development, engineering excellence, and deep expertise in AI, Web3, and consumer technology.',
   },
 ]
 
