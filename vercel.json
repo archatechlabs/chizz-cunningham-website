@@ -1,7 +1,37 @@
 {
   "framework": "nextjs",
   "buildCommand": "npm run build",
-  "outputDirectory": ".next"
+  "outputDirectory": ".next",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "chizzcunningham.io" }],
+      "destination": "https://www.chizzcunningham.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.chizzcunningham.io" }],
+      "destination": "https://www.chizzcunningham.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "chizzcunningham.tech" }],
+      "destination": "https://www.chizzcunningham.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.chizzcunningham.tech" }],
+      "destination": "https://www.chizzcunningham.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "chizzcunningham.com" }],
+      "destination": "https://www.chizzcunningham.com/:path*",
+      "permanent": true
+    }
+  ]
 }
-
-

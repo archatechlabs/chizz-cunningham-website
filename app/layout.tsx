@@ -15,15 +15,41 @@ const inter = Inter({
   display: 'swap',
 })
 
+const CANONICAL_DOMAIN = 'https://www.chizzcunningham.com'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(CANONICAL_DOMAIN),
   title: 'Chizz Cunningham | Tech Entrepreneur & Investor',
   description: 'Building the systems behind the future of culture, technology, and ownership. Tech Entrepreneur, Investor, and Founder of MyPal4Life, SkyLi, and History of the Game.',
-  keywords: ['Chizz Cunningham', 'Tech Entrepreneur', 'Investor', 'MyPal4Life', 'SkyLi', 'History of the Game'],
+  keywords: ['Chizz Cunningham', 'Tech Entrepreneur', 'Investor', 'MyPal4Life', 'SkyLi', 'History of the Game', 'Baron Davis Enterprises', 'CTO', 'Archatech Labs'],
   authors: [{ name: 'Chizz Cunningham' }],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Chizz Cunningham | Tech Entrepreneur & Investor',
     description: 'Building the systems behind the future of culture, technology, and ownership.',
+    url: CANONICAL_DOMAIN,
+    siteName: 'Chizz Cunningham',
     type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Chizz Cunningham | Tech Entrepreneur & Investor',
+    description: 'Building the systems behind the future of culture, technology, and ownership.',
+    creator: '@chizzcunningham',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
@@ -34,6 +60,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+      <head>
+        <link rel="canonical" href={CANONICAL_DOMAIN} />
+      </head>
       <body className="font-sans antialiased bg-off-white">
         <MotionProvider>
           {children}
