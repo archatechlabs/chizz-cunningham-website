@@ -2,46 +2,45 @@
 
 const pressItems = [
   {
-    title: 'Baron Davis Expands Business Inside the Game to Members-Only Platform',
-    publication: 'Sports Business Journal',
-    date: 'February 2024',
-    description: 'Coverage of the expansion of B.I.G. into a membership platform fostering innovation and entrepreneurship across sports and technology.',
-    link: 'https://www.sportsbusinessjournal.com/Articles/2024/02/16/baron-davis-business-inside-the-game/',
+    title: 'Innovating for Impact: Chizz Cunningham\'s Vision at Archatech Labs',
+    publication: 'Writer\'s Life Magazine',
+    date: 'May 2025',
+    description: 'An exclusive interview exploring the pivotal moments of Chizz\'s entrepreneurial journey, his commitment to empowering underrepresented voices in tech, and the future of Archatech Labs.',
+    link: 'https://www.writerslifemag.com/single-post/innovating-for-impact-chizz-cunningham-s-vision-at-archatech-labs',
     featured: true,
   },
   {
-    title: 'Ex-NBA Star Baron Davis on What Makes His Business Platform Unique',
-    publication: 'Forbes',
-    date: 'October 2024',
-    description: 'In-depth feature on Baron Davis Enterprises and the team building innovative platforms at the intersection of sports, technology, and culture.',
-    link: 'https://www.forbes.com/sites/djsiddiqi/2024/10/18/ex-nba-star-baron-davis-on-what-makes-his-business-platform-unique-and-how-hes-helping-entrepreneurs/',
+    title: 'Archatech Labs Expands to Allentown: Chizz Cunningham\'s Vision to Help Make Pennsylvania a Tech Powerhouse',
+    publication: 'North Penn Now',
+    date: 'October 2025',
+    description: 'Coverage of Archatech Labs\' strategic expansion into Pennsylvania, positioning the state as a growing hub for technology and innovation.',
+    link: 'https://northpennnow.com/news/2025/oct/14/archatech-labs-expands-to-allentown-chizz-cunninghams-vision-to-help-make-pennsylvania-a-tech-powerhouse/',
     featured: true,
   },
   {
-    title: 'Baron Davis Launches Playrs Holdings in Web3 Partnership',
-    publication: 'Boardroom',
-    date: '2024',
-    description: 'Announcement of Playrs Holdings, a holding company bridging sports, technology, business, and culture in the Web3 space.',
-    link: 'https://boardroom.tv/baron-davis-playrs-holdings-partnership/',
+    title: 'Chizz Cunningham: From Jamaica Queens to Silicon Valley – A Tech Mogul in the Making',
+    publication: 'Tech Bullion',
+    date: '2025',
+    description: 'A deep dive into Chizz Cunningham\'s journey from Queens, New York to becoming a leading figure in the tech industry, building ventures across AI, blockchain, and gaming.',
+    link: 'https://techbullion.com/chizz-cunningham-from-jamaica-queens-to-silicon-valley-a-tech-mogul-in-the-making/',
+    featured: true,
+  },
+  {
+    title: 'Chizz Cunningham on Blockchain: Beyond the Hype – Building Real-World Utility',
+    publication: 'London Daily News',
+    date: '2025',
+    description: 'An exploration of Chizz\'s approach to blockchain technology—focusing on practical applications and real-world utility rather than speculation.',
+    link: 'https://www.londondaily.news/chizz-cunningham-on-blockchain-beyond-the-hype-building-real-world-utility/',
     featured: false,
   },
   {
-    title: 'NBA All-Star Baron Davis Invests in Fan-Owned SailGP Racing Team',
-    publication: 'PR Newswire',
-    date: 'July 2023',
-    description: 'First professional athlete to invest in a fan-owned sports team powered by blockchain and DAO technology.',
-    link: 'https://www.prnewswire.com/news-releases/nba-all-star-baron-davis-invests-in-fan-owned-sailgp-racing-team-301884690.html',
+    title: 'Chizz Cunningham on Building Global Tech Infrastructure for the Next Generation',
+    publication: '7NetWorth',
+    date: '2025',
+    description: 'Insights on building scalable technology infrastructure designed to empower the next generation of creators, entrepreneurs, and innovators worldwide.',
+    link: 'https://7networth.com/chizz-cunningham-on-building-global-tech-infrastructure-for-the-next-generation/',
     featured: false,
   },
-  // TODO: Add more press items as they become available
-  // {
-  //   title: 'Your Press Title Here',
-  //   publication: 'Publication Name',
-  //   date: 'Month Year',
-  //   description: 'Brief description of the coverage.',
-  //   link: 'https://...',
-  //   featured: false,
-  // },
 ]
 
 export default function PressSection() {
@@ -66,13 +65,13 @@ export default function PressSection() {
           Press & Media
         </h2>
         <p className="text-[#6A6A6A] text-base md:text-lg max-w-2xl mx-auto">
-          Featured coverage of our ventures and the future we're building.
+          Featured coverage of my work building the future of technology, culture, and ownership.
         </p>
       </div>
 
       {/* Featured Press */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
-        {featuredPress.map((item, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
+        {featuredPress.map((item) => (
           <a
             key={item.title}
             href={item.link}
@@ -90,7 +89,7 @@ export default function PressSection() {
             {/* Subtle gradient overlay on hover */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#252528] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
-            <div className="relative z-10">
+            <div className="relative z-10 flex flex-col h-full">
               {/* Publication & Date */}
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-[#6A6A6A] text-sm font-medium tracking-wide">
@@ -103,17 +102,17 @@ export default function PressSection() {
               </div>
 
               {/* Title */}
-              <h3 className="font-serif text-white text-xl md:text-2xl leading-tight mb-4 group-hover:text-[#E0E0E0] transition-colors">
+              <h3 className="font-serif text-white text-lg md:text-xl leading-tight mb-4 group-hover:text-[#E0E0E0] transition-colors flex-grow">
                 {item.title}
               </h3>
 
               {/* Description */}
-              <p className="text-[#8A8A8A] text-base leading-relaxed mb-6">
+              <p className="text-[#8A8A8A] text-sm leading-relaxed mb-6">
                 {item.description}
               </p>
 
               {/* Read More */}
-              <div className="flex items-center text-[#B8B8B8] text-sm font-medium group-hover:text-white transition-colors">
+              <div className="flex items-center text-[#B8B8B8] text-sm font-medium group-hover:text-white transition-colors mt-auto">
                 Read Article
                 <svg 
                   className="ml-2 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" 
@@ -186,4 +185,3 @@ export default function PressSection() {
     </section>
   )
 }
-
