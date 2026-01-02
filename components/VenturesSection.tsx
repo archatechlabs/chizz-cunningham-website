@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
+import Image from 'next/image'
 
 type VentureCategory = 'All' | 'AI' | 'Web3' | 'Gaming' | 'Consumer'
 
@@ -15,6 +16,7 @@ interface Venture {
   external?: boolean
   categories: VentureCategory[]
   fullDescription?: string
+  logo?: string
 }
 
 const ventures: Venture[] = [
@@ -27,6 +29,7 @@ const ventures: Venture[] = [
     external: true,
     categories: ['AI', 'Web3', 'Consumer'],
     fullDescription: 'Archatech Labs is a product studio that partners with visionary founders and enterprises to build transformative technology products. From concept to scale, we provide strategic product development, engineering excellence, and deep expertise in AI, Web3, and consumer technology.',
+    logo: '/Logos/Archatech-Labs-Logo-1.png',
   },
   {
     name: 'MyPal4Life + SkyLi',
@@ -232,9 +235,21 @@ export default function VenturesSection() {
                 <div className="relative z-10 flex flex-col h-full">
                   {/* Header */}
                   <div className="flex items-start justify-between mb-6">
-                    <h3 className="font-serif text-white text-2xl md:text-[28px] leading-tight tracking-[-0.01em]">
-                      {venture.name}
-                    </h3>
+                    {venture.logo ? (
+                      <div className="relative h-10 w-auto">
+                        <Image
+                          src={venture.logo}
+                          alt={`${venture.name} logo`}
+                          width={180}
+                          height={40}
+                          className="h-10 w-auto object-contain brightness-0 invert"
+                        />
+                      </div>
+                    ) : (
+                      <h3 className="font-serif text-white text-2xl md:text-[28px] leading-tight tracking-[-0.01em]">
+                        {venture.name}
+                      </h3>
+                    )}
                     <span className="text-[#4A4A4A] text-xs font-medium tracking-wider uppercase shrink-0 ml-4 group-hover:text-[#6A6A6A] transition-colors">
                       0{index + 1}
                     </span>
@@ -331,9 +346,22 @@ export default function VenturesSection() {
                   ))}
                 </div>
 
-                <h3 id="modal-title" className="font-serif text-[#1A1A1C] text-3xl md:text-4xl leading-tight mb-2">
-                  {selectedVenture.name}
-                </h3>
+                {selectedVenture.logo ? (
+                  <div className="relative h-12 w-auto mb-2">
+                    <Image
+                      src={selectedVenture.logo}
+                      alt={`${selectedVenture.name} logo`}
+                      width={220}
+                      height={48}
+                      className="h-12 w-auto object-contain"
+                    />
+                    <h3 id="modal-title" className="sr-only">{selectedVenture.name}</h3>
+                  </div>
+                ) : (
+                  <h3 id="modal-title" className="font-serif text-[#1A1A1C] text-3xl md:text-4xl leading-tight mb-2">
+                    {selectedVenture.name}
+                  </h3>
+                )}
                 <p className="text-[#6A6A6A] text-base font-medium mb-6">
                   {selectedVenture.credibility}
                 </p>
