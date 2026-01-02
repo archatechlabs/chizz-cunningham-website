@@ -2,17 +2,10 @@
 
 const ventures = [
   {
-    name: 'MyPal4Life',
-    mission: 'Smart pet health ecosystem reimagining how we care for our companions.',
-    differentiator: 'First platform combining wearable hardware, AI health insights, and blockchain-based incentives for proactive pet wellness.',
-    credibility: 'Hardware + Software + AI ecosystem',
-    link: '#contact',
-  },
-  {
-    name: 'SkyLi',
-    mission: 'Smart collar hardware platform powering real-time pet health insights.',
-    differentiator: 'Medical-grade sensors in consumer-friendly form factor—tracking vitals, activity, and behavioral patterns 24/7.',
-    credibility: 'Proprietary hardware development',
+    name: 'MyPal4Life + SkyLi',
+    mission: 'Smart pet health ecosystem powered by proprietary hardware, AI, and blockchain incentives.',
+    differentiator: 'End-to-end platform: SkyLi smart collar with medical-grade sensors tracks vitals 24/7, while MyPal4Life rewards pet owners for proactive wellness.',
+    credibility: 'Hardware + Software + AI + Web3',
     link: '#contact',
   },
   {
