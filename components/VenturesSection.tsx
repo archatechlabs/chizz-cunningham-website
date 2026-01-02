@@ -42,7 +42,8 @@ const ventures = [
     mission: 'Product studio and engineering for ambitious startups and enterprise.',
     differentiator: 'Not just code—strategic product development from zero-to-one, with a focus on consumer tech and Web3.',
     credibility: 'Full-stack product studio',
-    link: '#contact',
+    link: 'https://archatechlabs.com',
+    external: true,
   },
 ]
 
