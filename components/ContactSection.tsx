@@ -8,8 +8,7 @@ export default function ContactSection() {
   // TODO: Replace with actual email address when confirmed
   const email = 'hello@chizzcunningham.com'
   
-  // TODO: Replace with actual LinkedIn URL when confirmed
-  const linkedInUrl = 'https://linkedin.com/in/chizzcunningham'
+  const linkedInUrl = 'https://www.linkedin.com/in/chizz-cunningham-664237214/'
   
   const prefersReducedMotion = useReducedMotion()
   const sectionRef = useRef(null)
