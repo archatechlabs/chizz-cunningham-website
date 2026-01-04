@@ -39,6 +39,7 @@ const ventures: Venture[] = [
     link: '#contact',
     categories: ['AI', 'Web3', 'Consumer'],
     fullDescription: 'MyPal4Life and SkyLi together represent a complete reimagining of pet healthcare. The SkyLi smart collar uses proprietary medical-grade sensors to continuously monitor your pet\'s vital signs, activity levels, and behavioral patterns. This data feeds into MyPal4Life\'s AI-powered platform, which provides actionable health insights and rewards pet owners with blockchain-based incentives for maintaining their pet\'s wellness.',
+    logo: '/Logos/Neighborhood_ta;es_logo.png',
   },
   {
     name: 'History of the Game',
