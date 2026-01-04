@@ -1,5 +1,6 @@
 import Nav from '@/components/Nav'
 import HeroCard from '@/components/HeroCard'
+import AboutSection from '@/components/AboutSection'
 import PhilosophySection from '@/components/PhilosophySection'
 import VenturesSection from '@/components/VenturesSection'
 import PressSection from '@/components/PressSection'
@@ -46,6 +47,9 @@ export default function Home() {
         <div className="mt-4 md:mt-8">
           <HeroCard />
         </div>
+
+        {/* About Section */}
+        <AboutSection />
 
         {/* Philosophy Section */}
         <PhilosophySection />

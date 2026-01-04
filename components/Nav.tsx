@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
 
 const navLinks = [
+  { label: 'About', href: '#about', section: 'about' },
   { label: 'Philosophy', href: '#philosophy', section: 'philosophy' },
   { label: 'Ventures', href: '#ventures', section: 'ventures' },
   { label: 'Press', href: '#press', section: 'press' },
@@ -40,7 +41,7 @@ export default function Nav() {
       { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
     )
 
-    const sections = ['philosophy', 'ventures', 'press', 'contact']
+    const sections = ['about', 'philosophy', 'ventures', 'press', 'contact']
     sections.forEach((section) => {
       const element = document.getElementById(section)
       if (element) observer.observe(element)

@@ -19,16 +19,16 @@ const CANONICAL_DOMAIN = 'https://www.chizzcunningham.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(CANONICAL_DOMAIN),
-  title: 'Chizz Cunningham | Tech Entrepreneur & Investor',
-  description: 'Building the systems behind the future of culture, technology, and ownership. Tech Entrepreneur, Investor, and Founder of MyPal4Life, SkyLi, and History of the Game.',
-  keywords: ['Chizz Cunningham', 'Tech Entrepreneur', 'Investor', 'MyPal4Life', 'SkyLi', 'History of the Game', 'Baron Davis Enterprises', 'CTO', 'Archatech Labs'],
+  title: 'Chizz Cunningham | Tech Entrepreneur, Builder & Fractional CTO',
+  description: 'Chizz Cunningham is a tech entrepreneur, investor, and fractional CTO. Through Archatech Labs, he helps startups architect, scale, and operationalize technology with clarity and precision.',
+  keywords: ['Chizz Cunningham', 'Tech Entrepreneur', 'Fractional CTO', 'Startup CTO', 'Archatech Labs', 'Software Architecture', 'Technology Leadership', 'Baron Davis Enterprises', 'Investor'],
   authors: [{ name: 'Chizz Cunningham' }],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Chizz Cunningham | Tech Entrepreneur & Investor',
-    description: 'Building the systems behind the future of culture, technology, and ownership.',
+    title: 'Chizz Cunningham | Tech Entrepreneur, Builder & Fractional CTO',
+    description: 'Tech entrepreneur and fractional CTO helping startups build and scale technology through Archatech Labs.',
     url: CANONICAL_DOMAIN,
     siteName: 'Chizz Cunningham',
     type: 'website',
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chizz Cunningham | Tech Entrepreneur & Investor',
-    description: 'Building the systems behind the future of culture, technology, and ownership.',
+    title: 'Chizz Cunningham | Tech Entrepreneur, Builder & Fractional CTO',
+    description: 'Tech entrepreneur and fractional CTO helping startups build and scale technology through Archatech Labs.',
     creator: '@chizzcunningham',
   },
   robots: {

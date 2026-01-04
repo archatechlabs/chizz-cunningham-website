@@ -95,34 +95,31 @@ export default function HeroCard() {
               variants={itemVariants}
               className="text-[#6B6B6B] text-xs sm:text-sm font-medium tracking-[0.2em] uppercase mb-6"
             >
-              Tech Entrepreneur & Investor • CTO, Baron Davis Enterprises
+              Founder of Archatech Labs • CTO, Baron Davis Enterprises
             </motion.p>
 
             {/* Headline with staggered line reveal */}
             <motion.h1
               variants={headlineVariants}
-              className="font-serif text-headline-white text-[32px] sm:text-[42px] md:text-[48px] lg:text-[58px] leading-[1.08] tracking-[-0.02em] max-w-[540px]"
+              className="font-serif text-headline-white text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] leading-[1.12] tracking-[-0.02em] max-w-[560px]"
             >
               <motion.span variants={lineVariants} className="block">
-                Building the systems
-              </motion.span>
-              <motion.span variants={lineVariants} className="block">
-                behind the future of
+                Chizz Cunningham
               </motion.span>
               <motion.span variants={lineVariants} className="block text-[#A8A8A6]">
-                culture, technology,
+                Tech Entrepreneur,
               </motion.span>
               <motion.span variants={lineVariants} className="block text-[#A8A8A6]">
-                and ownership.
+                Builder & Fractional CTO
               </motion.span>
             </motion.h1>
 
             {/* Subheadline */}
             <motion.p
               variants={itemVariants}
-              className="mt-6 md:mt-8 text-[#9A9A9A] text-base sm:text-lg font-light leading-relaxed max-w-[480px]"
+              className="mt-6 md:mt-8 text-[#9A9A9A] text-base sm:text-lg font-light leading-relaxed max-w-[500px]"
             >
-              I create companies at the intersection of AI, Web3, gaming, and consumer technology—where culture meets innovation.
+              I build companies, brands, software, and scalable technology platforms. Through Archatech Labs, I provide fractional CTO services to startups and growing companies, helping founders architect, scale, and operationalize their technology with clarity and precision.
             </motion.p>
 
             {/* Social Proof Row */}
@@ -132,11 +129,11 @@ export default function HeroCard() {
             >
               <span>Founder</span>
               <span className="text-[#3A3A3A]">•</span>
-              <span>CTO</span>
+              <span>Fractional CTO</span>
               <span className="text-[#3A3A3A]">•</span>
               <span>Product Builder</span>
               <span className="text-[#3A3A3A]">•</span>
-              <span>Systems Thinker</span>
+              <span>Systems Architect</span>
             </motion.div>
 
             {/* CTA Buttons */}
