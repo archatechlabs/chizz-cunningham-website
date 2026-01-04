@@ -49,6 +49,7 @@ const ventures: Venture[] = [
     external: true,
     categories: ['Web3', 'Gaming'],
     fullDescription: 'History of the Game is a multimedia platform preserving and celebrating basketball culture through cutting-edge technology. From exclusive documentary content and digital collectibles to immersive virtual world experiences, we\'re creating a new way for fans to connect with the sport\'s rich history and legendary players.',
+    logo: '/Logos/HOTG_Logo_transparent.png',
   },
   {
     name: 'Oatmeal Radio Café',
@@ -58,6 +59,7 @@ const ventures: Venture[] = [
     link: '#contact',
     categories: ['Web3', 'Consumer'],
     fullDescription: 'Oatmeal Radio Café reimagines the relationship between artists, venues, and fans. By leveraging Web3 technology, we\'re building a platform where everyone who contributes to cultural experiences shares in the value they create. From live performances to recorded content, ownership flows back to the community.',
+    logo: '/Logos/oatmeal_radio_cafe_logo.jpg',
   },
   {
     name: 'Neighborhood Tales',
@@ -67,6 +69,7 @@ const ventures: Venture[] = [
     link: '#contact',
     categories: ['Gaming', 'Consumer'],
     fullDescription: 'Neighborhood Tales creates gaming and virtual world experiences that authentically represent diverse communities and their stories. We\'re building digital spaces where real neighborhoods, real histories, and real cultural expressions come to life—giving underrepresented communities ownership of their narratives in the digital age.',
+    logo: '/Logos/Neighborhood_ta;es_logo.png',
   },
 ]
 
