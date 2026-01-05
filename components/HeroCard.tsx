@@ -101,23 +101,23 @@ export default function HeroCard() {
             {/* Headline with staggered line reveal */}
             <motion.h1
               variants={headlineVariants}
-              className="font-serif text-headline-white text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] leading-[1.12] tracking-[-0.02em] max-w-[560px]"
+              className="font-serif text-headline-white text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] leading-[1.12] tracking-[-0.02em] max-w-[580px]"
             >
               <motion.span variants={lineVariants} className="block">
                 Chizz Cunningham
               </motion.span>
               <motion.span variants={lineVariants} className="block text-[#A8A8A6]">
-                Tech Entrepreneur,
+                Tech Entrepreneur, Investor
               </motion.span>
               <motion.span variants={lineVariants} className="block text-[#A8A8A6]">
-                Builder & Fractional CTO
+                & Fractional CTO
               </motion.span>
             </motion.h1>
 
             {/* Subheadline */}
             <motion.p
               variants={itemVariants}
-              className="mt-6 md:mt-8 text-[#9A9A9A] text-base sm:text-lg font-light leading-relaxed max-w-[500px]"
+              className="mt-6 md:mt-8 text-[#9A9A9A] text-base sm:text-lg font-light leading-relaxed max-w-[520px]"
             >
               I build companies, brands, software, and scalable technology platforms. Through Archatech Labs, I provide{' '}
               <a 
@@ -126,7 +126,7 @@ export default function HeroCard() {
               >
                 fractional CTO
               </a>{' '}
-              services to startups and growing companies, helping founders architect, scale, and operationalize their technology with clarity and precision.
+              services to startups and growing companies, helping founders operationalize and scale their technology with precision and clarity.
             </motion.p>
 
             {/* Social Proof Row */}

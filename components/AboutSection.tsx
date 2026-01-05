@@ -65,18 +65,14 @@ export default function AboutSection() {
           className="space-y-6"
         >
           <p className="text-[#4A4A4A] text-lg md:text-xl leading-relaxed">
-            Chizz Cunningham is a tech entrepreneur, investor, and{' '}
+            Chizz Cunningham is a seasoned tech entrepreneur, investor, and{' '}
             <a 
               href="/fractional-cto"
               className="text-[#1A1A1C] font-medium hover:underline underline-offset-4 transition-all"
             >
               fractional CTO
             </a>{' '}
-            focused on building and scaling modern technology companies. He works hands-on with founders and leadership teams to design software architectures, launch platforms, and transform ideas into durable businesses.
-          </p>
-          
-          <p className="text-[#4A4A4A] text-lg md:text-xl leading-relaxed">
-            Through{' '}
+            with a passion for building software platforms and empowering Black software engineers. As the founder of{' '}
             <a 
               href="https://archatechlabs.com" 
               target="_blank" 
@@ -85,7 +81,7 @@ export default function AboutSection() {
             >
               Archatech Labs
             </a>
-            , Chizz partners with startups to provide strategic and technical leadership without the overhead of a full-time executive, helping companies move faster, scale smarter, and build technology that lasts.
+            , Chizz partners with startups and founders to provide strategic technology leadership, helping companies scale from idea to execution with expert CTO support and modern engineering guidance.
           </p>
         </motion.div>
 
