@@ -19,7 +19,10 @@ const CANONICAL_DOMAIN = 'https://www.chizzcunningham.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(CANONICAL_DOMAIN),
-  title: 'Chizz Cunningham | Tech Entrepreneur, Builder & Fractional CTO',
+  title: {
+    default: 'Chizz Cunningham | Tech Entrepreneur, Builder & Fractional CTO',
+    template: 'Chizz Cunningham | %s',
+  },
   description: 'Chizz Cunningham is a tech entrepreneur, investor, and fractional CTO. Through Archatech Labs, he helps startups architect, scale, and operationalize technology with clarity and precision.',
   keywords: ['Chizz Cunningham', 'Tech Entrepreneur', 'Fractional CTO', 'Startup CTO', 'Archatech Labs', 'Software Architecture', 'Technology Leadership', 'Baron Davis Enterprises', 'Investor'],
   authors: [{ name: 'Chizz Cunningham' }],
@@ -33,12 +36,21 @@ export const metadata: Metadata = {
     siteName: 'Chizz Cunningham',
     type: 'website',
     locale: 'en_US',
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Chizz Cunningham - Tech Entrepreneur, Builder & Fractional CTO',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Chizz Cunningham | Tech Entrepreneur, Builder & Fractional CTO',
     description: 'Tech entrepreneur and fractional CTO helping startups build and scale technology through Archatech Labs.',
     creator: '@chizzcunningham',
+    images: ['/og.png'],
   },
   robots: {
     index: true,

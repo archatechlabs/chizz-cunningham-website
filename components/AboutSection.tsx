@@ -65,7 +65,14 @@ export default function AboutSection() {
           className="space-y-6"
         >
           <p className="text-[#4A4A4A] text-lg md:text-xl leading-relaxed">
-            Chizz Cunningham is a tech entrepreneur, investor, and fractional CTO focused on building and scaling modern technology companies. He works hands-on with founders and leadership teams to design software architectures, launch platforms, and transform ideas into durable businesses.
+            Chizz Cunningham is a tech entrepreneur, investor, and{' '}
+            <a 
+              href="/fractional-cto"
+              className="text-[#1A1A1C] font-medium hover:underline underline-offset-4 transition-all"
+            >
+              fractional CTO
+            </a>{' '}
+            focused on building and scaling modern technology companies. He works hands-on with founders and leadership teams to design software architectures, launch platforms, and transform ideas into durable businesses.
           </p>
           
           <p className="text-[#4A4A4A] text-lg md:text-xl leading-relaxed">
@@ -80,6 +87,33 @@ export default function AboutSection() {
             </a>
             , Chizz partners with startups to provide strategic and technical leadership without the overhead of a full-time executive, helping companies move faster, scale smarter, and build technology that lasts.
           </p>
+        </motion.div>
+
+        {/* Learn More Link */}
+        <motion.div
+          variants={itemVariants}
+          className="mt-8 text-center"
+        >
+          <a 
+            href="/fractional-cto"
+            className="inline-flex items-center text-[#6A6A6A] text-sm font-medium hover:text-[#1A1A1C] transition-colors"
+          >
+            Learn more about Fractional CTO services
+            <svg 
+              className="ml-2 w-4 h-4" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </a>
         </motion.div>
 
         {/* Decorative divider */}

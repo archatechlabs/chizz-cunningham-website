@@ -119,7 +119,14 @@ export default function HeroCard() {
               variants={itemVariants}
               className="mt-6 md:mt-8 text-[#9A9A9A] text-base sm:text-lg font-light leading-relaxed max-w-[500px]"
             >
-              I build companies, brands, software, and scalable technology platforms. Through Archatech Labs, I provide fractional CTO services to startups and growing companies, helping founders architect, scale, and operationalize their technology with clarity and precision.
+              I build companies, brands, software, and scalable technology platforms. Through Archatech Labs, I provide{' '}
+              <a 
+                href="/fractional-cto" 
+                className="text-[#D0D0D0] hover:text-white underline underline-offset-4 transition-colors"
+              >
+                fractional CTO
+              </a>{' '}
+              services to startups and growing companies, helping founders architect, scale, and operationalize their technology with clarity and precision.
             </motion.p>
 
             {/* Social Proof Row */}
