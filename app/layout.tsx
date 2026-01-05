@@ -63,6 +63,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: '/Favicon/chizz_cunnigham_favicon.png',
+    shortcut: '/Favicon/chizz_cunnigham_favicon.png',
+    apple: '/Favicon/chizz_cunnigham_favicon.png',
+  },
 }
 
 export default function RootLayout({
