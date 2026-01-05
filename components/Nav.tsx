@@ -6,6 +6,7 @@ import { useReducedMotion } from '@/hooks/useReducedMotion'
 
 const navLinks = [
   { label: 'About', href: '#about', section: 'about' },
+  { label: 'Services', href: '/fractional-cto', section: null },
   { label: 'Philosophy', href: '#philosophy', section: 'philosophy' },
   { label: 'Ventures', href: '#ventures', section: 'ventures' },
   { label: 'Press', href: '#press', section: 'press' },
@@ -70,6 +71,12 @@ export default function Nav() {
   }, [mobileMenuOpen])
 
   const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // For page links (not anchors), let the browser navigate normally
+    if (!href.startsWith('#')) {
+      setMobileMenuOpen(false)
+      return
+    }
+    
     e.preventDefault()
     const target = document.querySelector(href)
     if (target) {
