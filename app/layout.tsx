@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: 'Chizz Cunningham | %s',
   },
   description: 'Chizz Cunningham is a tech entrepreneur, investor, and fractional CTO. Through Archatech Labs, he helps startups architect, scale, and operationalize technology with clarity and precision.',
-  keywords: ['Chizz Cunningham', 'Tech Entrepreneur', 'Fractional CTO', 'Startup CTO', 'Archatech Labs', 'Software Architecture', 'Technology Leadership', 'Baron Davis Enterprises', 'Investor'],
+  keywords: ['Chizz Cunningham', 'Tech Entrepreneur', 'Fractional CTO', 'Startup CTO', 'Archatech Labs', 'Software Architecture', 'Technology Leadership', 'Entrepreneur', 'Investor'],
   authors: [{ name: 'Chizz Cunningham' }],
   alternates: {
     canonical: '/',

@@ -95,7 +95,7 @@ export default function HeroCard() {
               variants={itemVariants}
               className="text-[#6B6B6B] text-xs sm:text-sm font-medium tracking-[0.2em] uppercase mb-6"
             >
-              Founder of Archatech Labs • CTO, Baron Davis Enterprises
+              Founder of Archatech Labs • CTO • Entrepreneur
             </motion.p>
 
             {/* Headline with staggered line reveal */}
