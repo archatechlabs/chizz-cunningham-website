@@ -5,8 +5,7 @@ import { motion, useInView } from 'framer-motion'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
 
 export default function ContactSection() {
-  // TODO: Replace with actual email address when confirmed
-  const email = 'hello@chizzcunningham.com'
+  const email = 'Chizz@ChizzCunningham.com'
   
   const linkedInUrl = 'https://www.linkedin.com/in/chizz-cunningham-664237214/'
   
