@@ -158,7 +158,7 @@ export default function FractionalCTOPage() {
             variants={itemVariants}
             className="text-[#4A4A4A] text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-4"
           >
-            I help startups and growing companies architect, ship, and scale software and platforms—without the overhead of a full-time executive.
+            I help startups and growing companies architect, ship, and scale software. No full-time executive overhead. Just focused, senior technical leadership.
           </motion.p>
 
           <motion.p
@@ -174,7 +174,7 @@ export default function FractionalCTOPage() {
             >
               Archatech Labs
             </a>
-            , I partner with founders as a fractional CTO—bringing senior technical leadership to companies that need it most.
+            , I partner directly with founders as their fractional CTO.
           </motion.p>
         </motion.div>
       </section>
