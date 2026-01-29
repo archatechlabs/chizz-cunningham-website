@@ -1,9 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useState, useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
 
 const pillars = [
@@ -29,26 +27,6 @@ export default function PhilosophySection() {
   const prefersReducedMotion = useReducedMotion()
   const sectionRef = useRef(null)
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: prefersReducedMotion ? 0 : 0.15,
-        delayChildren: prefersReducedMotion ? 0 : 0.1,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: prefersReducedMotion ? 0 : 0.6, ease: [0.22, 1, 0.36, 1] as const },
-    },
-  }
 
   const toggleExpand = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index)
@@ -88,19 +66,12 @@ export default function PhilosophySection() {
       </motion.div>
 
       {/* Pillars Grid */}
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate={isInView ? 'visible' : 'hidden'}
-        className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20">
         {pillars.map((pillar, index) => (
-          <motion.button
+          <button
             key={pillar.title}
-            variants={itemVariants}
             onClick={() => toggleExpand(index)}
-            whileHover={prefersReducedMotion ? {} : { y: -4, scale: 1.01 }}
-            className={`group relative p-8 md:p-10 bg-white rounded-2xl border text-left transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#1A1A1C] focus:ring-offset-2 ${
+            className={`group relative p-8 md:p-10 bg-white rounded-2xl border text-left transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#1A1A1C] focus:ring-offset-2 ${
               expandedIndex === index
                 ? 'border-[#1A1A1C] shadow-xl'
                 : 'border-[#E8E8E6] hover:border-[#C0C0BE] hover:shadow-lg card-glow'
@@ -122,41 +93,29 @@ export default function PhilosophySection() {
             </p>
 
             {/* Expandable content */}
-            <AnimatePresence>
-              {expandedIndex === index && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: prefersReducedMotion ? 0 : 0.3, ease: [0.22, 1, 0.36, 1] }}
-                  className="overflow-hidden"
-                >
-                  <div className="pt-4 mt-4 border-t border-[#E8E8E6]">
-                    <p className="text-[#4A4A4A] text-sm leading-relaxed italic">
-                      {pillar.expanded}
-                    </p>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {expandedIndex === index && (
+              <div className="pt-4 mt-4 border-t border-[#E8E8E6]">
+                <p className="text-[#4A4A4A] text-sm leading-relaxed italic">
+                  {pillar.expanded}
+                </p>
+              </div>
+            )}
 
             {/* Expand indicator */}
             <div className="flex items-center gap-2 mt-4 text-[#8A8A8A] text-xs font-medium tracking-wide">
               <span>{expandedIndex === index ? 'Less' : 'Read more'}</span>
-              <motion.svg
-                animate={{ rotate: expandedIndex === index ? 180 : 0 }}
-                transition={{ duration: prefersReducedMotion ? 0 : 0.2 }}
-                className="w-4 h-4"
+              <svg
+                className={`w-4 h-4 transition-transform duration-200 ${expandedIndex === index ? 'rotate-180' : ''}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </motion.svg>
+              </svg>
             </div>
-          </motion.button>
+          </button>
         ))}
-      </motion.div>
+      </div>
 
       {/* Throughline Paragraph */}
       <motion.div
