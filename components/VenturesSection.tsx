@@ -190,31 +190,17 @@ export default function VenturesSection() {
         </motion.div>
 
         {/* Ventures Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: prefersReducedMotion ? 0 : 0.5 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
-        >
-          <AnimatePresence mode="wait">
-            {filteredVentures.map((venture, index) => (
-              <motion.article
-                key={venture.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ 
-                  duration: prefersReducedMotion ? 0 : 0.3,
-                  delay: prefersReducedMotion ? 0 : index * 0.05
-                }}
-                whileHover={prefersReducedMotion ? {} : { y: -4 }}
-                onClick={() => setSelectedVenture(venture)}
-                className="group relative flex flex-col p-8 md:p-10 bg-[#1A1A1C] rounded-2xl overflow-hidden cursor-pointer transition-shadow duration-500 hover:shadow-2xl hover:shadow-black/20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
-                style={{ minHeight: '320px' }}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => e.key === 'Enter' && setSelectedVenture(venture)}
-                aria-label={`View details for ${venture.name}`}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {filteredVentures.map((venture, index) => (
+            <article
+              key={venture.name}
+              onClick={() => setSelectedVenture(venture)}
+              className="group relative flex flex-col p-8 md:p-10 bg-[#1A1A1C] rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-black/20 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+              style={{ minHeight: '320px' }}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && setSelectedVenture(venture)}
+              aria-label={`View details for ${venture.name}`}
               >
                 {/* Subtle gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#252528] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -271,9 +257,7 @@ export default function VenturesSection() {
                     {/* View Details */}
                     <span className="inline-flex items-center text-[#D0D0D0] text-sm font-medium group-hover:text-white transition-colors duration-200">
                       View Details
-                      <motion.svg
-                        animate={prefersReducedMotion ? {} : { x: [0, 4, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                      <svg
                         className="ml-2 w-4 h-4"
                         fill="none"
                         stroke="currentColor"
@@ -281,14 +265,13 @@ export default function VenturesSection() {
                         aria-hidden="true"
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </motion.svg>
+                      </svg>
                     </span>
                   </div>
                 </div>
-              </motion.article>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+            </article>
+          ))}
+        </div>
       </section>
 
       {/* Modal/Drawer */}
