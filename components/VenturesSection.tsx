@@ -117,25 +117,6 @@ export default function VenturesSection() {
     }
   }, [selectedVenture])
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: prefersReducedMotion ? 0 : 0.1,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: prefersReducedMotion ? 0 : 0.5, ease: [0.22, 1, 0.36, 1] as const },
-    },
-  }
-
   const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!href.startsWith('#')) return
     e.preventDefault()
@@ -210,21 +191,22 @@ export default function VenturesSection() {
 
         {/* Ventures Grid */}
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: prefersReducedMotion ? 0 : 0.5 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
         >
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence mode="wait">
             {filteredVentures.map((venture, index) => (
               <motion.article
                 key={venture.name}
-                variants={itemVariants}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: prefersReducedMotion ? 0 : 0.3 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ 
+                  duration: prefersReducedMotion ? 0 : 0.3,
+                  delay: prefersReducedMotion ? 0 : index * 0.05
+                }}
                 whileHover={prefersReducedMotion ? {} : { y: -4 }}
                 onClick={() => setSelectedVenture(venture)}
                 className="group relative flex flex-col p-8 md:p-10 bg-[#1A1A1C] rounded-2xl overflow-hidden cursor-pointer transition-shadow duration-500 hover:shadow-2xl hover:shadow-black/20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
