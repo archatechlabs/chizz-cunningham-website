@@ -74,6 +74,16 @@ const ventures: Venture[] = [
     fullDescription: 'Neighborhood Tales creates gaming and virtual world experiences that authentically represent diverse communities and their stories. We\'re building digital spaces where real neighborhoods, real histories, and real cultural expressions come to life—giving underrepresented communities ownership of their narratives in the digital age.',
     logo: '/Logos/Neighborhood_ta;es_logo.png',
   },
+  {
+    name: 'Chalam',
+    mission: 'AI-powered dream journal that reveals the hidden patterns in your subconscious.',
+    differentiator: 'The Dream Map™ visualizes recurring symbols and themes across your dreams, turning nightly reflections into meaningful self-discovery.',
+    credibility: 'AI + Consumer wellness',
+    link: 'https://www.chalamworld.com',
+    external: true,
+    categories: ['AI', 'Consumer'],
+    fullDescription: 'Chalam is an AI dream journal that helps you understand the patterns in your subconscious. Log your dreams nightly, receive thoughtful AI interpretations in seconds, and explore your unique Dream Map—a visualization of recurring symbols, themes, and emotional patterns over time. Available on iOS with Android coming soon, Chalam transforms dream journaling from a solitary practice into a journey of self-discovery.',
+  },
 ]
 
 const filters: VentureCategory[] = ['All', 'AI', 'Web3', 'Gaming', 'Consumer']
