@@ -83,6 +83,7 @@ const ventures: Venture[] = [
     external: true,
     categories: ['AI', 'Consumer'],
     fullDescription: 'Chalam is an AI dream journal that helps you understand the patterns in your subconscious. Log your dreams nightly, receive thoughtful AI interpretations in seconds, and explore your unique Dream Map—a visualization of recurring symbols, themes, and emotional patterns over time. Available on iOS with Android coming soon, Chalam transforms dream journaling from a solitary practice into a journey of self-discovery.',
+    logo: '/Logos/chalam_icon_black.png',
   },
 ]
 
