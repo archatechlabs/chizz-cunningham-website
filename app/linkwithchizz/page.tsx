@@ -1,9 +1,23 @@
 'use client'
 
 import Image from 'next/image'
+import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
 export default function LinkWithChizz() {
+  const hasDownloaded = useRef(false)
+
+  useEffect(() => {
+    if (hasDownloaded.current) return
+    hasDownloaded.current = true
+    
+    const autoDownload = async () => {
+      await new Promise(resolve => setTimeout(resolve, 500))
+      await handleDownloadVCard()
+    }
+    autoDownload()
+  }, [])
+
   const handleDownloadVCard = async () => {
     const response = await fetch('/api/vcard')
     const blob = await response.blob()
