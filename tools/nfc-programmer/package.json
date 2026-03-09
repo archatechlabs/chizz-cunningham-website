@@ -1,0 +1,17 @@
+{
+  "name": "@primetime/nfc-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local NFC read/write interface for ACR122U and PC/SC readers",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "nfc-pcsc": "^0.8.1",
+    "ndef": "^0.2.0"
+  }
+}
