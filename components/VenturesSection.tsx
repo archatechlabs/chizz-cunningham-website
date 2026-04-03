@@ -53,6 +53,18 @@ const ventures: Venture[] = [
     logo: '/Logos/HOTG_Logo_transparent.png',
   },
   {
+    name: 'Business Inside the Game',
+    mission: 'Community and content at the intersection of sports, business, and entertainment.',
+    differentiator: 'BIG TV, newsroom, and events—where multi-hyphenates connect, collaborate, and stay ahead of the industry.',
+    credibility: 'Sports + media + community',
+    link: 'https://www.teambig.io',
+    external: true,
+    categories: ['Consumer'],
+    fullDescription:
+      'Business Inside the Game (BIG) is a membership community focused on the business of sports and entertainment. Through BIG TV, the newsroom, live events, and a connected network of professionals, BIG is where multi-hyphenates share stories, discover opportunities, and shape what comes next in the industry.',
+    logo: '/Logos/big-logo.png',
+  },
+  {
     name: 'Oatmeal Radio Café',
     mission: 'Music, coffee, and technology—unified under creator-first economics.',
     differentiator: 'A new model where artists, venues, and fans share ownership in the cultural experiences they create together.',
