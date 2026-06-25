@@ -32,6 +32,18 @@ const ventures: Venture[] = [
     logo: '/Logos/Archatech-Labs-Logo-1.png',
   },
   {
+    name: 'Harvest Covenant',
+    mission: 'Christ-centered education platform for grades 9–12—admissions, academics, athletics, and community in one place.',
+    differentiator: 'A public school presence plus an operations platform for staff and families: enrollment, events, dual enrollment, and covenant-community life on Harvest Platform.',
+    credibility: 'EdTech + faith-based education',
+    link: 'https://www.harvestcovenant.org',
+    external: true,
+    categories: ['Consumer'],
+    fullDescription:
+      'Harvest Covenant is a private, faith-driven learning community for grades 9–12, built on Harvest Platform. The site brings together admissions, academics, athletics, events, and giving—while staff and families use the platform for day-to-day operations. From individualized college-prep academics and dynamic sports to dual enrollment with Southeastern University, Harvest Covenant cultivates Christ-centered leaders through faith, family, scholarship, and sport.',
+    logo: '/Logos/harvest-covenant-logo.png',
+  },
+  {
     name: 'MyPal4Life + SkyLi',
     mission: 'Smart pet health ecosystem powered by proprietary hardware, AI, and blockchain incentives.',
     differentiator: 'End-to-end platform: SkyLi smart collar with medical-grade sensors tracks vitals 24/7, while MyPal4Life rewards pet owners for proactive wellness.',
