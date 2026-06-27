@@ -2,15 +2,12 @@
 
 import Image from 'next/image'
 import { useState, useCallback } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
 
 export default function HeroCard() {
   const [imageError, setImageError] = useState(false)
   const prefersReducedMotion = useReducedMotion()
-  
-  const { scrollY } = useScroll()
-  const parallaxY = useTransform(scrollY, [0, 500], [0, 50])
 
   const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
@@ -208,10 +205,7 @@ export default function HeroCard() {
 
           {/* Right Column - Portrait Image with subtle parallax */}
           <div className="order-1 md:order-2 relative h-[320px] sm:h-[380px] md:h-auto min-h-[320px] overflow-hidden">
-            <motion.div
-              className="absolute inset-0"
-              style={prefersReducedMotion ? {} : { y: parallaxY }}
-            >
+            <div className="absolute inset-0">
               <div className="absolute inset-[-20%] md:inset-0">
                 {!imageError ? (
                   <Image
@@ -258,7 +252,7 @@ export default function HeroCard() {
                   background: 'linear-gradient(to bottom, transparent 50%, rgba(11, 11, 12, 0.9) 100%)',
                 }}
               />
-            </motion.div>
+            </div>
           </div>
         </div>
       </motion.div>

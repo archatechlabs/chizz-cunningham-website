@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
 
@@ -15,18 +15,22 @@ const navLinks = [
 
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [isSticky, setIsSticky] = useState(false)
+  const [isCompact, setIsCompact] = useState(false)
   const [activeSection, setActiveSection] = useState('')
   const prefersReducedMotion = useReducedMotion()
+  const sentinelRef = useRef<HTMLDivElement>(null)
 
-  // Handle sticky nav after hero
+  // Compact nav styling after hero — IntersectionObserver avoids layout-shift scroll loops
   useEffect(() => {
-    const handleScroll = () => {
-      setIsSticky(window.scrollY > 400)
-    }
+    const sentinel = sentinelRef.current
+    if (!sentinel) return
 
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsCompact(!entry.isIntersecting),
+      { rootMargin: '0px', threshold: 0 }
+    )
+    observer.observe(sentinel)
+    return () => observer.disconnect()
   }, [])
 
   // Track active section
@@ -99,12 +103,11 @@ export default function Nav() {
 
   return (
     <>
-      {/* Sticky Nav Wrapper */}
+      <div ref={sentinelRef} className="h-px w-full" aria-hidden="true" />
+      {/* Sticky Nav Wrapper — stays in document flow (no fixed + spacer jump) */}
       <div
-        className={`py-6 md:py-8 transition-all duration-300 ${
-          isSticky
-            ? 'fixed top-0 left-0 right-0 z-40 nav-sticky py-4 md:py-4 px-4 sm:px-6 lg:px-8'
-            : ''
+        className={`sticky top-0 z-40 transition-all duration-300 ${
+          isCompact ? 'nav-sticky py-4 md:py-4' : 'py-6 md:py-8'
         }`}
       >
         <nav className="w-full max-w-hero mx-auto" role="navigation" aria-label="Main navigation">
@@ -270,9 +273,6 @@ export default function Nav() {
           </div>
         </nav>
       </div>
-
-      {/* Spacer for sticky nav */}
-      {isSticky && <div className="h-[72px] md:h-[56px]" />}
     </>
   )
 }
