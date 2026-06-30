@@ -18,6 +18,15 @@ interface PressItem {
 
 const pressItems: PressItem[] = [
   {
+    title: 'How Chizz Cunningham Is Helping Startups Rethink the CTO Role Through Fractional Technology Leadership',
+    publication: 'Startup Dope',
+    date: '2025',
+    description: 'Coverage of how fractional CTO leadership through Archatech Labs helps founders navigate AI, product strategy, and scalable architecture—without the cost of a full-time executive hire.',
+    link: 'https://startupdope.com/how-chizz-cunningham-is-helping-startups-rethink-the-cto-role-through-fractional-technology-leadership/',
+    featured: true,
+    type: 'Feature',
+  },
+  {
     title: 'Innovating for Impact: Chizz Cunningham\'s Vision at Archatech Labs',
     publication: 'Writer\'s Life Magazine',
     date: 'May 2025',
