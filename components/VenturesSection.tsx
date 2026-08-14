@@ -100,6 +100,18 @@ const ventures: Venture[] = [
     logo: '/Logos/supl-logo.png',
   },
   {
+    name: 'LYMBQ Academy',
+    mission: 'The school built for the AI generation—academics, careers, games, trades, and emerging tech in one learning ecosystem.',
+    differentiator: 'Personalized missions and AI tools guided by real Path Finders, with Brain Games that turn focus, language, and problem-solving into play.',
+    credibility: 'EdTech + AI + learning games',
+    link: 'https://www.lymbqacademy.com',
+    external: true,
+    categories: ['AI', 'Gaming', 'Consumer'],
+    fullDescription:
+      'LYMBQ Academy is a full learning ecosystem for the next generation—combining academics, AI-powered personalization, career exploration, Brain Games, hands-on trades, engineering, sports, and emerging technology. Students progress through personalized missions and XP paths, always supported by Path Finders who guide, coach, and connect with every learner.',
+    logo: '/Logos/lymbq-logo.png',
+  },
+  {
     name: 'Chalam',
     mission: 'AI-powered dream journal that reveals the hidden patterns in your subconscious.',
     differentiator: 'The Dream Map™ visualizes recurring symbols and themes across your dreams, turning nightly reflections into meaningful self-discovery.',
